@@ -1,41 +1,61 @@
-# StickGen
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
-# Real-Time News Analysis and Social Media Engagement System
+body {
+    background: #f5f5f5;
+    text-align: center;
+}
 
-## Overview
-This project builds a **real-time pipeline** for scraping, analyzing news articles, detecting trends/topics, and generating **stickers and emojis** to enhance social media engagement. Users can search, analyze, and share trending content via an **intuitive UI**.
+header {
+    background: #333;
+    color: white;
+    padding: 2rem;
+}
 
-## Features
+.social-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
 
-### 📡 Real-Time News Scraping and Ingestion  
-- Scrapes news from [NewsAPI](https://newsapi.org/) and [GDELT](https://www.gdeltproject.org/).
-- Uses **Kafka** for real-time ingestion.
-- Stores raw articles in **MongoDB**.
+.social-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
 
-### 🔍 Data Preprocessing and Analysis  
-- NLP-based **text cleaning and tokenization**.
-- **Elasticsearch** for indexing and querying.
-- **Redis** for caching trending articles.
+.social-card:hover {
+    transform: translateY(-5px);
+}
 
-### 📊 Trend & Topic Detection  
-- Uses **LDA/BERTtopic** for topic modeling.
-- Displays **trending topics** via Kibana dashboards.
+.social-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
 
-### 🎨 Sticker & Emoji Generation  
-- Uses **Diffusion models & GANs** to create stickers.
-- Generates **emojis** from text sentiment & topics.
-- **Dataset sources**: [Anonymous0722](https://anonymous0722.github.io/), [OpenMoji](https://openmoji.org/), [Twemoji](https://uvaauas.figshare.com/articles/dataset/Twemoji_Dataset/5822100).
+.fa-tiktok { color: #000; }
+.fa-instagram { color: #E1306C; }
+.fa-youtube { color: #FF0000; }
+.fa-twitter { color: #1DA1F2; }
 
-### 🕵️‍♂️ Smart Search Functionality  
-- **Faceted search, full-text search, synonym detection** (via Elasticsearch).
-- **Sentiment & trend filters** for refined results.
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
 
-### 🖥️ User Interface (UI)  
-- **React.js or Flask** for a responsive UI.
-- **Visualization tools** for trends and analytics.
-- **Social media sharing** for stickers/emojis.
-
----
-
-Let me know if you need further improvements! 🚀
-
+.btn:hover {
+    background: #555;
+}
