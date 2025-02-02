@@ -1,41 +1,35 @@
-# StickGen
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حساباتي على التواصل الاجتماعي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>تواصل معني على المنصات</h1>
+    </header>
 
-# Real-Time News Analysis and Social Media Engagement System
+    <div class="social-container">
+        <!-- تيك توك -->
+        <div class="social-card">
+            <i class="fab fa-tiktok"></i>
+            <h2>TikTok</h2>
+            <p>@اسم_المستخدم</p>
+            <a href="رابط_الحساب" target="_blank" class="btn">زيارة الحساب</a>
+        </div>
 
-## Overview
-This project builds a **real-time pipeline** for scraping, analyzing news articles, detecting trends/topics, and generating **stickers and emojis** to enhance social media engagement. Users can search, analyze, and share trending content via an **intuitive UI**.
+        <!-- إنستجرام -->
+        <div class="social-card">
+            <i class="fab fa-instagram"></i>
+            <h2>Instagram</h2>
+            <p>@اسم_المستخدم</p>
+            <a href="رابط_الحساب" target="_blank" class="btn">زيارة الحساب</a>
+        </div>
 
-## Features
-
-### 📡 Real-Time News Scraping and Ingestion  
-- Scrapes news from [NewsAPI](https://newsapi.org/) and [GDELT](https://www.gdeltproject.org/).
-- Uses **Kafka** for real-time ingestion.
-- Stores raw articles in **MongoDB**.
-
-### 🔍 Data Preprocessing and Analysis  
-- NLP-based **text cleaning and tokenization**.
-- **Elasticsearch** for indexing and querying.
-- **Redis** for caching trending articles.
-
-### 📊 Trend & Topic Detection  
-- Uses **LDA/BERTtopic** for topic modeling.
-- Displays **trending topics** via Kibana dashboards.
-
-### 🎨 Sticker & Emoji Generation  
-- Uses **Diffusion models & GANs** to create stickers.
-- Generates **emojis** from text sentiment & topics.
-- **Dataset sources**: [Anonymous0722](https://anonymous0722.github.io/), [OpenMoji](https://openmoji.org/), [Twemoji](https://uvaauas.figshare.com/articles/dataset/Twemoji_Dataset/5822100).
-
-### 🕵️‍♂️ Smart Search Functionality  
-- **Faceted search, full-text search, synonym detection** (via Elasticsearch).
-- **Sentiment & trend filters** for refined results.
-
-### 🖥️ User Interface (UI)  
-- **React.js or Flask** for a responsive UI.
-- **Visualization tools** for trends and analytics.
-- **Social media sharing** for stickers/emojis.
-
----
-
-Let me know if you need further improvements! 🚀
-
+        <!-- إضافة منصات أخرى بنفس النمط -->
+    </div>
+</body>
+</html>
