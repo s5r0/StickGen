@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Home';
 import Stickers from './Stickers';
 import About from './About';
+import QuranPlayer from './QuranPlayer';
 import Footer from './components/Footer';
 import './styles.css';
 
@@ -35,6 +36,9 @@ const AppContent = () => {
               <li className="nav-item">
                 <Link to="/about" className="nav-link">About</Link>
               </li>
+              <li className="nav-item">
+                <Link to="/quran" className="nav-link">Quran</Link>
+              </li>
             </ul>
           </nav>
         </header>
@@ -44,6 +48,7 @@ const AppContent = () => {
         <Route path="/" element={<Home />} />
         <Route path="/stickers" element={<Stickers />} />
         <Route path="/about" element={<About />} />
+        <Route path="/quran" element={<QuranPlayer />} />
       </Routes>
     </div>
   );
